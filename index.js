@@ -964,3 +964,268 @@ JAVASCRIPT ADVANCED CHALLENGES
 
 // }
 // console.log(showRating(4));
+
+/*
+
+MEDIUM CHALLENGES 
+
+*/
+
+//q1
+
+// function filterOutFalsy(value1, value2){
+//     return (!value1) ? value1 : value2;
+    
+// }
+// console.log (filterOutFalsy(0, 500));
+
+//q2 Return length of array
+
+function arrLength (arr){
+    return arr.Length
+
+}
+console.log([1, 2, 3]);
+
+//q3 get the last element in an array
+
+function lastElem (array){
+    return array[array.length - 1];
+
+}
+console.log(lastElem([3, 2, 0, 6, 2]))
+ 
+
+//q4 find the sum of an array
+
+function arrSum(arrays){
+    let sum = 0;
+
+    for (let i = 0; i < arrays.length; ++i){
+
+    sum = sum + arrays[i];
+
+    
+    }
+    return sum
+
+
+}
+console.log(arrSum([2, 2, 2]))
+
+//q5 add up numbers from a single number
+
+function progressiveSum(number){
+    let sum = 0;
+
+    for(let i = 0; i <= number; ++i){
+
+    sum = i + sum;
+
+    }
+
+    return sum
+
+
+}
+console.log(progressiveSum(3))
+
+//q6 given a number in seconds, return the number in mm:ss format
+
+function calcTime(seconds){
+    let timerMinutes =  Math.floor(seconds / 60);
+    let timerSeconds = seconds % 60;
+
+    if (timerMinutes.toString().length === 1){
+        timerMinutes = '0' + timerMinutes
+    }
+
+    return timerMinutes + ":" + timerSeconds
+
+}
+console.log(calcTime(70))
+
+//q7 Find the largest number in an array
+
+function getMax (arr1){
+    let max = arr1 [0];
+
+    for(let i = 0; i < arr1.length; ++i){
+        
+        if (arr1[i] > max) {
+            max = arr1[i];
+
+        }
+
+        }
+
+        return max;
+
+}
+
+
+console.log(getMax([5, 100, 200]))
+
+//q8 - Reverse a string
+
+// function reverseString(string){
+//     let reversedString = "";
+
+//     for (let i = 0; i < string.length; ++i){
+
+//         reversedString = string[i] + reversedString
+        
+//     }
+
+    
+
+//     return reversedString
+
+// }
+// console.log(reverseString('David'));
+
+//Incrementing loop above
+
+// 
+
+// function reverseString(string){
+//     let reversedString = "";
+//     for (let i = string.length - 1;  i >= 0; --i){
+
+//         reversedString += string[i];
+
+        
+
+//     }
+
+//     return reversedString
+
+   
+        
+
+// }
+// console.log(reverseString('David'));
+
+//Decrementing for loop above
+
+function reverseString(string){
+    return string.split('').reverse().join('')
+
+}
+console.log(reverseString('David'))
+
+//Array reverse property above
+
+//q9 - Turn every element in an array into a 0
+
+//For Loop method
+
+// function convertToZeros (array1){
+//     let sum = []
+    
+    
+//     for(let i = 0; i < array1.length; ++i){
+        
+//         sum[i] = 0
+
+//     }
+
+//     return sum;
+// } 
+
+   
+// console.log(convertToZeros([5, 100, 0]))
+
+// // Array fill method
+
+// function convertToZeros (array1){
+// return new Array (array1.length).fill(0)
+// }
+// console.log(convertToZeros([5, 100, 0]))
+
+// // Array map method
+
+function convertToZeros(array1){
+
+    return array1.map(elem => 0)
+}
+console.log(convertToZeros([1, 2, 3]))
+
+//q10 Filter out all the apples
+
+//For loop method
+
+// function removeApples(array2){
+
+//     let removed = [];
+
+//     for(let i = 0; i < array2.length; ++i){
+//         if (array2[i] !== 'Apples'){
+//             removed.push(array2[i])
+
+            
+//         }  
+//     }
+
+//     return removed
+
+// }
+// console.log(removeApples(['Banana', 'Orange', 'Apples']))
+
+//Array filter method
+
+function removeApples(array2){
+    
+    return array2.filter(elem => elem !== 'Apples')
+
+}
+console.log(removeApples(['Banana', 'Or', 'Apples']))
+
+//q11 Filter Out all the falsy values
+
+//For loop method
+
+// function filterOutFalsy(array3){
+
+//     let falsy = [];
+
+//     for (let i = 0; i < array3.length; ++i){
+//         if (!!array3[i] === true){
+//             falsy.push(array3[i])
+//         }
+
+
+//     }
+
+//     return falsy
+
+// }
+// console.log(filterOutFalsy(['Tomato', 'Orange', false]))
+
+//Array filter method
+
+function filterOutFalsy(Array3){
+
+    return Array3.filter(elem => !!elem === true)
+
+}
+console.log(filterOutFalsy(['Tomat', 'orange', false]))
+
+//q12 convert to boolean value
+
+function convertToBoolean(array4){
+
+    return array4.map(elem => !!elem)
+
+
+}
+console.log(convertToBoolean([500, 0, "David", null]))
+
+
+
+
+
+
+
+
+
